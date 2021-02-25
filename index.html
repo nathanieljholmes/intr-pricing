@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="slider.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <div class="main-container">
+
+    <div class="header-container">
+      <div class="header-title">Simple, traffic-based pricing</div>
+      <div class="header-subtitle">Sign-up for our 30-day trial. No credit card required. </div>
+    </div>
+    <div class="card-container">
+      <div class="control-container">
+        <div class="info-group">
+          <div class="pageviews"><span id="textInput"> </span>Pageviews</div>
+          <div class="dynamic-info"><span id="textInputAlt"> </span> /month</div>
+        </div>
+        <div class="slider-container"><input type="range" min="1" max="100" step=1 id="priceCtrl" onchange="updateTextInput(this.value);"></div>
+        <div class="installment-control-group">
+          <div class="switch-label">Monthly Billing</div>
+          <div class="switch-toggle">
+            <label class="switch">
+              <input type="checkbox" id="toggle">
+              <span class="toggle round"></span>
+            </label>
+          </div>
+          <div class="switch-label">Yearly Billing</div>
+          <div id="discountTag" class="discount" >25% discount</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="request-container">
+        <div class="benefits-group">
+          <div class="benefit"><img src="/images/icon-check.svg">Unlimited websites</div>
+          <div class="benefit"><img src="/images/icon-check.svg">100% data ownership</div>
+          <div class="benefit"><img src="/images/icon-check.svg"> Email reports</div>
+        </div>
+        <button class="trial-request"> Start my trial</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="slider.js"></script>
+<script src="index.js"></script>
+
+</html>
